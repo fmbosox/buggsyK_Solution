@@ -55,7 +55,7 @@ class TableViewController: UITableViewController {
                 self.tableView.refreshControl?.endRefreshing()
                 switch result {
                 case .success(let users):
-                    self.users += users
+                    self.users = users
                 case .failure(_):
                     //TODO: Handle error
                     break
