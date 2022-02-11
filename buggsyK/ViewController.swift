@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBAction func didPressedChallangeAcceptedButton(_ sender: Any) {
         //TODO: Runtime 1 - No IBAction
-        present(TableViewController(), animated: true, completion: nil)
+        self.navigationController?.pushViewController(TableViewController(), animated: true)
     }
     
     @IBOutlet weak var logoImageView: UIImageView!
