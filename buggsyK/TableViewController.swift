@@ -27,10 +27,10 @@ class TableViewController: UITableViewController {
         return label
     }()
     
-    private var setRefreshControl: () -> UIRefreshControl = {
+    private lazy var setRefreshControl: () -> UIRefreshControl = { [weak self]  in
         let control = UIRefreshControl()
         control.addTarget(self, action:
-                            #selector(handleRefreshControl),
+                            #selector(self?.handleRefreshControl),
                             for: .valueChanged)
        
         return control

@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addiOSDevSignatureLabel()
         //TODO: Runtime 2 - Update UI outside main thread while loading image.
-        //TODO: Memory Leak - Activity indicator viewcontroller, points to self and self.
+        //TODO: Memory Leak - Activity indicator -> viewcontroller, points to se
         showActivityIndicator()
         ImageService.downloadImage { result in
             DispatchQueue.main.async { [weak self] in
